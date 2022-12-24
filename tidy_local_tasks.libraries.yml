@@ -1,0 +1,9 @@
+# Custom module library for general purposes.
+tlt:
+  js:
+   front_end/dist/tidy_local_tasks.js: {}
+  css:
+    component:
+      front_end/dist/tidy_local_tasks.css: {}
+  dependencies:
+    - core/jquery

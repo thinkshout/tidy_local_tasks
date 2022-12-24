@@ -1,0 +1,30 @@
+{
+  "name": "@thinkshout/tidy_local_tasks",
+  "version": "0.0.1-dev",
+  "description": "A module to tidy up Drupal's standard local tasks by hiding them under a button that sticks to the side of the viewport.",
+  "license": "GPL-3.0",
+  "author": "ThinkShout, Inc",
+  "scripts": {
+    "build": "NODE_ENV=production parcel build ./assets/tidy_local_tasks.js --dist-dir ./dist --public-url ./dist",
+    "watch": "NODE_ENV=development parcel watch ./assets/tidy_local_tasks.js --dist-dir ./dist --public-url ./dist",
+    "format.assets": "eslint assets --fix && prettier --write assets",
+    "preinstall": "npx check-node-version --node $(cat .nvmrc)",
+    "postinstall": "npm run build",
+    "lint": "eslint assets --fix && prettier --check assets"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.8",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "parcel": "^2.0.0",
+    "postcss": "^8.3.9",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
+    "style-dictionary": "^3.0.2"
+  }
+}

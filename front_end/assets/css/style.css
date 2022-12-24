@@ -1,0 +1,84 @@
+@import "_generated-variables.css";
+
+/* Styles arrow svg from ts_admin.js */
+.tlt-arrow .show-hide {
+  height: 3rem;
+}
+.tlt-arrow .show-hide svg {
+  height: 1rem;
+  width: 1rem;
+  transform: rotate(-90deg);
+  transition: transform 300ms ease-in-out;
+  path {
+    fill: var(--color-white);
+  }
+}
+
+.tlt-menu {
+  background: var(--color-white);
+  box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.15);
+  left: -10rem;
+  position: fixed;
+  padding: 0.5rem;
+  margin: 0 !important;
+  top: 33%;
+  transition-property: left;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  transition-duration: 1s, 0.5s;
+  width: 10rem;
+  z-index: 200;
+
+  ul.tabs {
+    margin: 0;
+  }
+
+  li a {
+    display: inline-block;
+    margin: 0.25rem 0.5rem;
+    transition: text-decoration 0.4s linear;
+    width: 100%;
+    color: var(--color-black);
+    text-decoration: none;
+  }
+}
+
+/* HOCUS STYLES FOR MENU ITEMS */
+.tlt-menu li a:hover,
+.tlt-menu li a:focus {
+  text-decoration: underline;
+}
+
+.tlt-menu.active {
+  left: 0;
+}
+
+.tlt-menu.active .show-hide svg {
+  transform: rotate(90deg);
+}
+
+/* CHEVRON TAB BUTTON STYLE */
+.show-hide {
+  align-items: center;
+  background-color: var(--color-button-bg-default);
+  border: 1px solid white;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  bottom: 0;
+  display: flex;
+  cursor: pointer;
+  right: -2.1rem;
+  padding: 0 8px 0 9px;
+  position: absolute;
+  top: 0;
+  transition: color var(--transition-default);
+}
+
+.show-hide:hover,
+.show-hide:focus {
+  background-color: var(--color-button-bg-hocus);
+}
+
+.show-hide:hover.active,
+.show-hide:focus.active {
+  left: 0;
+}

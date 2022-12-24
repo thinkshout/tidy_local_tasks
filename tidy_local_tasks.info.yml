@@ -1,0 +1,6 @@
+name: Tidy Local Tasks
+type: module
+description: Tidies up Drupal's standard local tasks by hiding them under a button that sticks to the side of the viewport.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

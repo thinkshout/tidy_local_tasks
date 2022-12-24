@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Theme override to display primary and secondary local tasks.
+ *
+ * Available variables:
+ * - primary: HTML list items representing primary tasks.
+ * - secondary: HTML list items representing secondary tasks.
+ *
+ * Each item in these variables (primary and secondary) can be individually
+ * themed in menu-local-task.html.twig.
+ */
+#}
+{{ attach_library('tidy_local_tasks/tlt') }}
+{% if primary %}
+  <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+  <ul class="tabs primary tlt-menu tlt-arrow">
+    <div class='show-hide' role='button' aria-label='open admin menu panel' tabindex='0'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 10'> <path class='a' d='M18.5,6.5a.76.76,0,0,1-.2.4l-7.9,7.9a.76.76,0,0,1-.4.2.76.76,0,0,1-.4-.2l-7.9-8c-.1-.1-.2-.2-.2-.3a.76.76,0,0,1,.2-.4l.9-.9c0-.1.2-.2.3-.2a.76.76,0,0,1,.4.2L10,11.9l6.7-6.7a.52.52, 0,0,1,.4-.2.76.76,0,0,1,.4.2l.9.9C18.4,6.2,18.5,6.3,18.5,6.5Z' transform='translate(-1.5 -5)'/></svg></div>
+    {{ primary }}
+  </ul>
+{% endif %}
+{% if secondary %}
+  <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+  <ul class="tabs secondary">{{ secondary }}</ul>
+{% endif %}
