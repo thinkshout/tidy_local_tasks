@@ -3,18 +3,33 @@
 /**
  * @file
  * Primary module hooks for Tidy Local Tasks module.
- *
- * @DCG
- * This file is no longer required in Drupal 8.
- * @see https://www.drupal.org/node/2217931
  */
 
 /**
- * Implements hook_theme_registry_alter().
+ * Implements hook_theme().
  */
-function tidy_local_tasks_theme_registry_alter(&$theme_registry) {
-  if (!empty($theme_registry['menu_local_tasks'])) {
-    $module_path = \Drupal::service('extension.list.module')->getPath('tidy_local_tasks');
-    $theme_registry['menu_local_tasks']['path'] = $module_path . '/templates/navigation';
+function tidy_local_tasks_theme($existing, $type, $theme, $path) {
+  // Provide an alternate theme hook for local tasks.
+  return [
+    'tidy_local_tasks' => [
+      'variables' => [
+        'primary' => [],
+        'secondary' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function tidy_local_tasks_theme_suggestions_menu_local_tasks(array $variables) {
+  // IF we're not on the admin side, apply the alternate theme hook we created
+  // in tidy_local_tasks_theme().
+  $active_theme = \Drupal::theme()->getActiveTheme()->getName();
+  $admin_theme = \Drupal::config('system.theme')->get('admin');
+  if ($active_theme == $admin_theme) {
+    return [];
   }
+  return ['tidy_local_tasks'];
 }
