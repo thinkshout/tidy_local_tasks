@@ -1,0 +1,13 @@
+{
+    "name": "drupal/tidy_local_tasks",
+    "description": "A module to tidy up Drupal's standard local tasks by hiding them under a button that sticks to the side of the viewport.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Ben Di Maggio",
+            "email": "ben.dimaggio@thinkshout.com"
+        }
+    ],
+    "require": {}
+}
