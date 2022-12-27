@@ -1,7 +1,8 @@
-:root {
+body ul.tlt-menu {
   --transition-default: all 300ms ease-in-out;
-  --color-white: #fcfcfc;
-  --color-black: #000000;
-  --color-button-bg-default: #0f6292;
-  --color-button-bg-hocus: #0d77b5;
+  --arrow-color: #fcfcfc;
+  --drawer-background: #fcfcfc;
+  --text-color: #000000;
+  --button-bg-default: #0f6292;
+  --button-bg-hocus: #0d77b5;
 }
