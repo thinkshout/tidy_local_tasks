@@ -18,5 +18,7 @@ To alter this module's CSS or JS:
 [the install instructions](https://github.com/nvm-sh/nvm#install--update-script)
 if `which nvm` doesn't turn it up on your machine.
 2. Change into the module's front_end directory.
-3. Type `npm run watch`. Your changes to the module's CSS and JS should start
-getting compiled on the fly.
+3. Type either:
+   - `npm run watch`. Your changes to the module's CSS and JS should start
+   getting compiled, in dev mode, on the fly.
+   - `npm run build`. CSS/JS changes will be compiled once, in production mode.
