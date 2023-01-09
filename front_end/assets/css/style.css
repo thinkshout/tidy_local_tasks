@@ -10,12 +10,12 @@
   transform: rotate(-90deg);
   transition: transform 300ms ease-in-out;
   path {
-    fill: var(--color-white);
+    fill: var(--arrow-color);
   }
 }
 
 .tlt-menu {
-  background: var(--color-white);
+  background: var(--drawer-background);
   box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.15);
   left: -10rem;
   position: fixed;
@@ -37,7 +37,7 @@
     margin: 0.25rem 0.5rem;
     transition: text-decoration 0.4s linear;
     width: 100%;
-    color: var(--color-black);
+    color: var(--text-color);
     text-decoration: none;
   }
 }
@@ -59,7 +59,7 @@
 /* CHEVRON TAB BUTTON STYLE */
 .show-hide {
   align-items: center;
-  background-color: var(--color-button-bg-default);
+  background-color: var(--button-bg-default);
   border: 1px solid white;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -75,7 +75,7 @@
 
 .show-hide:hover,
 .show-hide:focus {
-  background-color: var(--color-button-bg-hocus);
+  background-color: var(--button-bg-hocus);
 }
 
 .show-hide:hover.active,
