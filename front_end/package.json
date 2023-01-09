@@ -5,16 +5,14 @@
   "license": "GPL-3.0",
   "author": "ThinkShout, Inc",
   "scripts": {
-    "build": "NODE_ENV=production parcel build ./assets/tidy_local_tasks.js --dist-dir ./dist --public-url ./dist",
-    "watch": "NODE_ENV=development parcel watch ./assets/tidy_local_tasks.js --dist-dir ./dist --public-url ./dist",
+    "build": "NODE_ENV=production parcel build ./assets/tidy_local_tasks.js --dist-dir ./dist --public-url ./dist --no-cache",
+    "watch": "NODE_ENV=development parcel watch ./assets/tidy_local_tasks.js --dist-dir ./dist --public-url ./dist --no-cache",
     "format.assets": "eslint assets --fix && prettier --write assets",
     "preinstall": "npx check-node-version --node $(cat .nvmrc)",
     "postinstall": "npm run build",
     "lint": "eslint assets --fix && prettier --check assets"
   },
-  "dependencies": {
-    "jquery": "^3.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "cssnano": "^5.0.8",
     "eslint": "^7.32.0",
