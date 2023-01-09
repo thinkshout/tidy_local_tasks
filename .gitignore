@@ -2,6 +2,7 @@
 lib/
 node_modules/
 .parcel-cache/
+*.map
 
 # Ignore OS Directories
 .DS_Store
